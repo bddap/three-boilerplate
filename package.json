@@ -4,7 +4,7 @@
   "description": "Starting point for threejs projects",
   "main": "index.js",
   "scripts": {
-    "test": "browserify index.js -o build/index.js"
+    "test": "browserify src/index.js -o build/index.js"
   },
   "repository": {
     "type": "git",
