@@ -13,5 +13,5 @@ module.exports = () => {
     }
     render()
 
-    return scene
+    return [scene, camera]
 }
