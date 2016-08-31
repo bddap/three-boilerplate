@@ -1,11 +1,14 @@
 const th = require('three')
+const full_screen = require('screenfull')
 
 const lock_pointer = on_change => {
     document.addEventListener('pointerlockchange',
         e => on_change(!!document.pointerLockElement))
 
-    document.body.addEventListener("click",
-        () => document.body.requestPointerLock())
+    document.body.addEventListener("click", () => {
+        document.body.requestPointerLock()
+        full_screen.request(document.body)
+    })
 }
 
 module.exports = (scene, camera) => {

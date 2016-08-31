@@ -2,10 +2,18 @@ const th = require('three')
 
 module.exports = () => {
     const scene = new th.Scene()
-    const camera = new th.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 10000)
+    const camera = new th.PerspectiveCamera(45, innerWidth/innerHeight, 1, 100000)
     const renderer = new th.WebGLRenderer()
-    renderer.setSize(window.innerWidth, window.innerHeight)
     document.body.appendChild(renderer.domElement)
+
+    const resize = () => {
+        const [w, h] = [innerWidth, innerHeight]
+        renderer.setSize(w, h)
+        camera.aspect = w / h
+        camera.updateProjectionMatrix()
+    }
+    resize()
+    addEventListener("resize", resize)
 
     const render = t => {
         requestAnimationFrame(render)
