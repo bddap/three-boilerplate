@@ -4,7 +4,8 @@
   "description": "Starting point for threejs projects",
   "main": "index.js",
   "scripts": {
-    "watch-js": "watchify src/index.js -o build/index.js"
+    "watch": "gulp watch",
+    "browserify": "gulp browserify"
   },
   "repository": {
     "type": "git",
@@ -12,11 +13,14 @@
   },
   "author": "Andrew Dirksen",
   "license": "ISC",
-  "devDependencies": {
-    "watchify": "^3.7.0"
-  },
   "dependencies": {
     "screenfull": "^3.0.2",
     "three": "^0.80.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.14.3",
+    "browserify": "^13.1.0",
+    "gulp": "^3.9.1",
+    "vinyl-source-stream": "^1.1.0"
   }
 }
