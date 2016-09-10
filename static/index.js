@@ -47241,7 +47241,7 @@ module.exports = (scene, camera) => {
 
     if (yaw.position.y < 10) {
       yaw.position.y = 10
-      vel.set(0, Math.max(0, vel.y), 0)
+      vel.set(vel.x / 2, Math.max(0, -vel.y / 2), vel.z / 2)
     }
 
   }
