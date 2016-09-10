@@ -4,8 +4,7 @@
   "description": "Starting point for threejs projects",
   "main": "index.js",
   "scripts": {
-    "watch": "gulp watch",
-    "browserify": "gulp browserify"
+    "watch": "gulp watch"
   },
   "repository": {
     "type": "git",

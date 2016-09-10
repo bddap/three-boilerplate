@@ -20,6 +20,7 @@ function on_src_update() {
 }
 
 gulp.task('watch', () => {
-  start_server()
+  on_src_update()
   gulp.watch('src/*', on_src_update)
+  start_server()
 })
